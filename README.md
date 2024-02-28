@@ -1,2 +1,1 @@
-# Portfolio
-Professional portfolio using Prismic tools 
+Professional portfolio using Prismic tools
