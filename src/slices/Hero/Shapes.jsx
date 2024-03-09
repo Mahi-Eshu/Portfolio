@@ -1,6 +1,7 @@
 "use client";
 
 import * as THREE from "three";
+import { TextureLoader } from "three";
 import { Canvas } from "@react-three/fiber";
 import { ContactShadows, Float, Environment } from "@react-three/drei";
 import { Suspense, useEffect, useRef, useState } from "react";
@@ -67,22 +68,27 @@ function Geometries() {
     new Audio("/sounds/hit4.ogg"),
   ];
 
+  const textureLoader = new TextureLoader();
+  const texture1 = textureLoader.load("metaltexture.jpg");
+
   const materials = [
     new THREE.MeshNormalMaterial(),
-    new THREE.MeshStandardMaterial({ color: 0x2ecc71, roughness: 0 }),
-    new THREE.MeshStandardMaterial({ color: 0xf1c40f, roughness: 0.4 }),
-    new THREE.MeshStandardMaterial({ color: 0xe74c3c, roughness: 0.1 }),
-    new THREE.MeshStandardMaterial({ color: 0x8e44ad, roughness: 0.1 }),
-    new THREE.MeshStandardMaterial({ color: 0x1abc9c, roughness: 0.1 }),
+    new THREE.MeshStandardMaterial({ color: 0x2ecc71, roughness: 0, map: texture1}), //green
+    new THREE.MeshStandardMaterial({ color: 0xf1c40f, roughness: 0.4, map: texture1 }), //yellow
+    new THREE.MeshStandardMaterial({ color: 0xe74c3c, roughness: 0.1, map: texture1 }), //red
+    new THREE.MeshStandardMaterial({ color: 0x8e44ad, roughness: 0.1, map: texture1 }), //purple
+    new THREE.MeshStandardMaterial({ color: 0x1abc9c, roughness: 0.1, map: texture1 }), //cyan
     new THREE.MeshStandardMaterial({
       roughness: 0,
       metalness: 0.5,
-      color: 0x2980b9,
+      color: 0x2980b9,  //blue
+      map: texture1
     }),
     new THREE.MeshStandardMaterial({
-      color: 0x2c3e50,
+      color: 0x2c3e50,   //darkblue
       roughness: 0.1,
       metalness: 0.5,
+      map: texture1
     }),
   ];
 
