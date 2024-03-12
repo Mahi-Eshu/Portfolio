@@ -9,5 +9,7 @@ Blog updates on weekends.
 3. npm run slicemachine (PORT 9999)
 4. npm run dev (PORT 3000)
 
-<!-- blog - mar4 -->
+
 <!-- ResumeUpdate2 -->
+<!-- blog - mar4 -->
+<!-- blog - mar10 -->
