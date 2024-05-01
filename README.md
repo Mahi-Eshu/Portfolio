@@ -1,5 +1,5 @@
 # Professional portfolio using Prismic tools
-Blog updates on weekends.
+Blog updates monthly.
 
 ## Installation and setup
 
